@@ -1,13 +1,5 @@
-let person = {
-    name: 'Andrew',
-    age: 30
-};
+// Arrays are objects
 
-person.name = 'Mosh'; 
-
-//Bracket Notation
-let selection = 'name';
-person[selection] = 'Mary';
-person.selection = 'Jimmy';
-
-console.log(person.name);
+let selectedColors = ['red', 'blue'];
+selectedColors[2] = 1;
+console.log(selectedColors);
