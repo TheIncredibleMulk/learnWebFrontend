@@ -79,7 +79,7 @@ section {
 }
 
 .toggle.active {
-    background: var(--primary-color) url(../images/close.png);
+    background: blue;/* var(--primary-color) url(../images/close.png); */
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,6 +99,9 @@ section {
     height: 110%;
 }
 
+
+/* Navigation Bar */
+
 .navigation {
     position: fixed;
     top: 0;
@@ -113,18 +116,70 @@ section {
 
 }
 
-
 .navigation.active {
     left:0;
 }
 
-
 .navigation ul {
-    posistion: relative;
+    position: relative;
 }
 
 .navigation ul li {
     position: relative;
     list-style: none;
     text-align: center;
+}
+
+.navigation ul li a {
+   font-size: 2.2rem;
+   color:#111;
+   text-decoration: none;
+   font-weight: 300;
+}
+
+.navigation ul li a:hover {
+    color: #f60f20;
+}
+
+.navigation .social-bar {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a {
+    display: inline-block;
+    transform: scale(0.5);
+}
+
+.navigation .email-icon{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+}
+
+
+@media (max-width: 1068px) {
+    .home-img{
+        display: none;
+    }
+
+    .logo {
+        top: 10px;
+        left: 40px;
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 100px 40px;
+    }
+
+    .navigation ul li a {
+        font-size: 2rem;
+    }
 }
