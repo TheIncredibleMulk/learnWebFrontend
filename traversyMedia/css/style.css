@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap')
-;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
 
 :root{
     --primary-color: #f60f20;
 }
+
+
+/* BASE STYLES */
 
 * {
     box-sizing: border-box;
@@ -29,10 +31,18 @@ p {
 
 section {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     align-items: center;
     padding: 100px;
+    margin-top: 60px;
 }
+
+section.home {
+    flex-direction: row;
+    margin-top: 0;
+}
+
 
 /* Button */
 
@@ -51,6 +61,7 @@ section {
     transform: scale(0.98);
 }
 
+
 /* Logo */
 
 .logo{
@@ -61,6 +72,7 @@ section {
     font-weight: 700;
     z-index: 10;
 }
+
 
 /*Toggle */
 
@@ -79,7 +91,7 @@ section {
 }
 
 .toggle.active {
-    background: blue;/* var(--primary-color) url(../images/close.png); */
+    background: var(--primqary-color) url(../images/close.png);
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,6 +100,7 @@ section {
 /* Home Page */
 
 .home-content{
+    position: relative;
     z-index: 10;
     max-width: 600px;
 }
@@ -95,7 +108,7 @@ section {
 .home-img{
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0px;
     height: 110%;
 }
 
@@ -161,6 +174,35 @@ section {
     position: absolute;
     bottom: 20px;
     transform: scale(0.5);
+}
+
+
+/* Services Page */
+.services {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.services .service {
+    padding: 30px;
+}
+
+.services .service:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #1b206e;
+}
+
+.services .service .icon img {
+    max-width: 100px;
 }
 
 
